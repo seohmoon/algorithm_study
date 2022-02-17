@@ -1,6 +1,6 @@
 # BOJ2920 음계
 music = list(map(int, input().split()))
-scale = ["c", "d", "e", "f", "g", "a", "b", "C","x"]
+scale = ["c", "d", "e", "f", "g", "a", "b", "C"]
 result =""
 for i in range(8):
     a = scale[music[i]-1]
