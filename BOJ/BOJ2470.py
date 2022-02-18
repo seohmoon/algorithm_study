@@ -16,10 +16,10 @@ e = N - 1 # 인덱스 마지막 숫자
 x = li[0]
 y = li[N-1]
 
-if li[0] > 0:
+if li[0] > 0: # 모든 수가 양수
     print(li[0], li[1])
     
-elif li[-1] < 0:
+elif li[-1] < 0: # 모든 수가 음수
     print(li[-2], li[-1])
     
 else :
