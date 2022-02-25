@@ -1,4 +1,4 @@
-# SWEA10871 X보다 작은 수
+# BOJ10871 X보다 작은 수
 
 N, X = map(int, input().split())
 arr = list(map(int, input().split()))
