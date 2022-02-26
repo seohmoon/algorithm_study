@@ -1,8 +1,5 @@
 # BOJ3052 나머지
 
-from tabnanny import check
-
-
 check = [0] * 42
 for i in range(10):
     i = int(input()) % 42

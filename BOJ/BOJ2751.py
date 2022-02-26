@@ -1,6 +1,14 @@
 # BOJ 백준 2751번 수 정렬하기2
 # n개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로그램
+n = int(input())
+arr = []*2000000
+for i in range(n):
+    i = int(input)
+    arr[i] += 1 
 
+
+
+'''
 #삽입정렬
 n = int(input())
 arr = []
@@ -14,6 +22,7 @@ for j in range(len(arr)):
             break
 for l in arr:
     print(l)
+    '''
 
 
 

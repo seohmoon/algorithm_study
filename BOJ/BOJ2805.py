@@ -11,3 +11,12 @@ for i in range(trees[-2]+1,-1,-1):
     if tem >= M:
         print(i)
         break
+
+a = trees[N//2]
+while True:
+    tem = 0
+    for j in trees:
+        if j > a:
+            tem += j - a
+    if tem >= M:
+        
