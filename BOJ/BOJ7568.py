@@ -1,5 +1,8 @@
 # BOJ7568 덩치
 
+from tabnanny import check
+
+
 N = int(input())
 peoples = []
 for people in range(N):
@@ -14,10 +17,22 @@ for i in range(N):
     cnt[i] = tem
 ranking = [0]*N
 cntsort = sorted(cnt, reverse=True)
-print(cntsort)
-
-
-
-
-print (ranking)
-            
+#print(cntsort)
+check = 1
+for a in range(N):
+    
+    if a == 0:
+        ranking[a] = 1
+    else:
+        if cntsort[a-1] == cntsort[a]:
+            ranking[a] = ranking[a-1]
+            check += 1
+        else:
+            ranking[a] = ranking[a-1] + check
+            check = 1
+#print(ranking)
+for b in cnt:
+    for c in range(N):
+        if b == cntsort[c]:
+            print(ranking[c], end=" ")
+            break            
