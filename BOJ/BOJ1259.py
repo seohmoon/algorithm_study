@@ -1,15 +1,21 @@
-# BOJ 1259 팰린드롬수
+# BOJ2164 카드2
 
-def radar(num):
-    if num == num[::-1]:
-        return('yes')
-    else:
-        return('no')
-  
-#num = str(input())
+def mix(x):
+    newarr = []
+    for i in range(len(x)):
+        if i % 2 == 0:
+            newarr.append(i)
+    return(newarr)
+
+
+N = int(input())
+arr = []
+for i in range(N+1):
+    arr.append(i)
+
 while True:
-    num = str(input())
-    if num == '0':
+    if len(arr) == 2:
+        print(arr[1])
         break
     else:
-        print(radar(num))
+        mix(arr)
