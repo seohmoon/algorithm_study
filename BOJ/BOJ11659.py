@@ -1,16 +1,17 @@
 # BOJ11659 구간 합 구하기
 # 투포인터로 풀어도 되고, 누적합으로 풀어도 됩니당
 
-# 누적합
-from sys import prefix
 
+
+# 누적합
+# 아니 얘 인풋을 바꾸면 됩니댱
 
 N, M = map(int, input().split())
-arr = list(map(int, input().split()))
+arr = [0] + list(map(int, input().split())) # 앞에 패딩
 prefix = [0 for _ in range(N+1)] # N+1인 이유는 앞에 패딩
 
 for i in range(1, N+1):
-    prefix[i] = prefix[i - 1] + arr[1]
+    prefix[i] = prefix[i - 1] + arr[i]
 
 for j in range(M):
     a, b = map(int, input().split())
