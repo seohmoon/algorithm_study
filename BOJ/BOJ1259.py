@@ -19,4 +19,4 @@ while len(arr) > 2:
     arr = mix(arr)
 
 if len(arr) == 2:
-        print(arr[1])
+        print(arr[1]) 
