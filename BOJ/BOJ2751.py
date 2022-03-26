@@ -1,10 +1,22 @@
 # BOJ 백준 2751번 수 정렬하기2
 # n개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로그램
+import sys
+
+n = int(sys.stdin.readline())
+list_input = []
+for i in range(n):
+    list_input.append(int(sys.stdin.readline()))
+for k in sorted(list_input):
+    print(k)
+
+
+'''시간초과 
 n = int(input())
 arr = []*2000000
 for i in range(n):
     i = int(input)
     arr[i] += 1 
+    '''
 
 
 

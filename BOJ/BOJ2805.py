@@ -1,22 +1,25 @@
 # BOJ 2805 나무 자르기
+import sys
+
+def check(x):
+    ans = 0
+    for i in trees:
+        if i > x:
+            ans += i-x
+    return ans >= M
+
+
 N, M = map(int, input().split())
-trees = list(map(int, input().split()))
-trees.sort()
+trees = list(map(int,sys.stdin.readline().split()))
 
-for i in range(trees[-2]+1,-1,-1):
-    tem = 0
-    for j in trees:
-        if j > i:
-            tem += j - i
-    if tem >= M:
-        print(i)
-        break
-
-a = trees[N//2]
-while True:
-    tem = 0
-    for j in trees:
-        if j > a:
-            tem += j - a
-    if tem >= M:
-        
+s = 0
+e = 1000000000 # 문제에서 가장 큰 수 주어짐
+ans = 0
+while s <= e:
+    mid = (s+e)//2
+    if check(mid): # True일 때
+        ans = mid
+        s = mid + 1
+    else: # False 일 때
+        e = mid - 1
+print(ans)
