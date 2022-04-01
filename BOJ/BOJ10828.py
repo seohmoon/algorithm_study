@@ -1,5 +1,5 @@
 # BOJ10828 스택
-import sys
+import sys # 안쓰면 시간 초과
 
 N = int(sys.stdin.readline())
 stack = []
