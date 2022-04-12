@@ -1,18 +1,20 @@
 # BOJ2606 바이러스
+# 연결 요소의 크기
 def dfs(cur):
-    global cnt
+    cnt = 1 # 자기 자신
     visited[cur] = True # 방문처리 해주기
-    cnt += 1
     
     for nxt in v[cur]:
         if visited[nxt]:
-            continue
+            continue 
 
-        dfs(nxt)
+        cnt += dfs(nxt)
+    
+    return(cnt)
 
 N = int(input())
 M = int(input())
-v = [[] for _ in range(N+1)] # 앞에 패딩
+v = [[] for _ in range(N+1)] 
 
 for i in range(M):
     a, b = map(int, input().split())
@@ -22,10 +24,5 @@ for i in range(M):
 
 visited = [False for _ in range(N+1)] # 방문표시 할 노드 만들기
 
-cnt = 0
-for i in range(2, N+1):
-    if visited[i]:
-        cnt += 1
-
-print(cnt)
+print(dfs(1) - 1)
 
