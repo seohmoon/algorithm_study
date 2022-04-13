@@ -25,4 +25,3 @@ for i in range(M):
 visited = [False for _ in range(N+1)] # 방문표시 할 노드 만들기
 
 print(dfs(1) - 1)
-
