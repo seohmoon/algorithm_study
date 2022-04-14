@@ -8,12 +8,23 @@ for j in range(n):
     randominput.append(int(input()))
 stack2 = []
 tem = 0
-while tem <= n:
-    if stack[-1] != randominput[-1-tem]:
-        stack2.append(stack.pop)
-        print("+")
-    else:
-        tem -= 1
-        stack.pop
-        print("-")
+ans = []
+while stack:
+    stack2.append(stack.pop())
+    ans.append("+")
+    if tem == n:
+        break
+    while True:
+        if stack2 != [] and tem < n and stack2[-1] == randominput[0+tem]:
+            stack2.pop()
+            tem += 1
+            ans.append("-")
+            if tem == n:
+                break
+        else:
+            break
+if  tem == n:
+    print(*ans, sep="\n")
+else:
+    print("NO")
     
