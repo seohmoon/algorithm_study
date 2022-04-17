@@ -4,7 +4,7 @@ arr = [] #9명의 난쟁이 키
 for i in range(9):
     a = int(input())
     arr.append(a)
-arr.sort() # 오름차순 정렬
+arr.sort() # 오름차순 정렬/
 
 s = 0 # start 배열의 가장 첫 인덱스 숫자
 e = 8 # end 배열의 가장 마지막 인덱스 숫자
